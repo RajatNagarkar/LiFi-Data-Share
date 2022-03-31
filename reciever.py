@@ -4,19 +4,19 @@ import serial
 import sys
 import serial.tools.list_ports
 
-comPort = ""
-ports = serial.tools.list_ports.comports()
-for port, desc, hwid in sorted(ports):
-    if "CH3" in desc:
-        comPort = port
-        break
+# comPort = ""
+# ports = serial.tools.list_ports.comports()
+# for port, desc, hwid in sorted(ports):
+#     if "CH3" in desc:
+#         comPort = port
+#         break
 
-if(comPort == ""):
-    print("Li-Fi Module not available.")
-    exit();
+# if(comPort == ""):
+#     print("Li-Fi Module not available.")
+#     exit();
 
-
-
+comPort = "COM6"
+print(comPort)
 fileName = input("Enter File Name: ")
 fileExt = input("Enter File Extension: ")
 fileSize = -1

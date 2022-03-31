@@ -16,7 +16,7 @@ for port, desc, hwid in sorted(ports):
 if(comPort == ""):
     print("Li-Fi Module not available.")
     exit();
-
+comPort = "COM4"
 
 ser = serial.Serial(comPort, 115200, timeout=0.1)
 filename = input("Enter file name: ")
